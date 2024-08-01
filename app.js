@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://sanjid:mongosanjid@cluster0.ylbg7lk.mongodb.net/
 // mongodb+srv://sanjid:mongosanjid@cluster0.ylbg7lk.mongodb.net/
 
 app.use(cors({
-    origin: ['http://localhost:4200']
+    origin: ['http://localhost:4200', 'https://todo-rho-teal.vercel.app']
 }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

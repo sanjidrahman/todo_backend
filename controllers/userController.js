@@ -5,6 +5,7 @@ const fs = require('fs')
 
 const sampleRoute = async (req, res) => {
     try {
+        console.log('Hi from ToDo Server 🎉');
         res.send('Hi from ToDo Server 🎉')
     } catch (err) {
         res.status(500).json({ message: "Internal Server Error" });
