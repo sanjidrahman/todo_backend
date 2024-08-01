@@ -2,6 +2,7 @@ const route = require('express')();
 const userController = require('../controllers/userController');
 const upload = require('../config/multer')
 
+route.get('/sample', userController.sampleRoute);
 route.get('/todos', userController.listTodo);
 route.post('/todos', userController.addTodo);
 route.get('/todos/:id', userController.getTodoDetails);

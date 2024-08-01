@@ -3,6 +3,14 @@ const Parser = require('json2csv').Parser;
 const csvtojson = require('csvtojson');
 const fs = require('fs')
 
+const sampleRoute = async (req, res) => {
+    try {
+        res.send('Hi from ToDo Server 🎉')
+    } catch (err) {
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+}
+
 const listTodo = async (req, res) => {
     try {
         const todo = await Todo.find({});
@@ -132,6 +140,7 @@ const importTodo = async (req, res) => {
 }
 
 module.exports = {
+    sampleRoute,
     listTodo,
     addTodo,
     getTodoDetails,
